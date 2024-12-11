@@ -62,11 +62,16 @@ Make sure to enable the `DicomWeb` server in the cloud Orthanc with:
 
 ### Notes
 
-1) The `http` protocol is not secure and `https` is recommended. Http should only be used if you have a truly safe network connection to the cloud Orthanc server, for instance through a VPN. Configuring network access is outside the scope of this tutorial but, depending on how your cloud Orthanc is running, VPN might not be possible and you might need to run a reverse proxy to serve the cloud Orthanc on `https`.
+1) The `http` protocol is not secure and `https` is recommended. Http should only be used if you have a truly safe network connection to the cloud Orthanc server, for instance through a VPN. Configuring network access is outside the scope of this tutorial but, depending on how your cloud Orthanc is running, VPN might not be possible and you might need to perform some additional configuration to serve the cloud Orthanc on `https`. Here are some links that can help:
+    - The Orthanc book explains [how Orthanc itself can be configured to serve https](https://orthanc.uclouvain.be/book/faq/https.html)
+    - You can [use Nginx to serve https](https://docs.nginx.com/nginx/admin-guide/security-controls/securing-http-traffic-upstream/)
+    - If you are using a cloud provider, they might have some documentation on how to serve https. 
+        - [Redirect HTTP to HTTPS with Azure](https://learn.microsoft.com/en-us/azure/application-gateway/redirect-http-to-https-portal)
+        - [FAQ for AWS API gateway](https://aws.amazon.com/api-gateway/faqs/)
 
-2) I haven't tested with a cloud remote server, only a local one, and this is why all the pre-existing configuration is for local servers. As long as the network configuration is correct, it should work with any source and destination Orthanc instances.
+1) I haven't tested with a cloud remote server, only a local one, and this is why all the pre-existing configuration is for local servers. As long as the network configuration is correct, it should work with any source and destination Orthanc instances.
 
-3) You might need or want to perform more advanced DICOMweb configuration. Please visit [the Orthanc Book](https://orthanc.uclouvain.be/book/index.html) and, in particular, [the DICOMweb plugin page](https://orthanc.uclouvain.be/book/plugins/dicomweb.html) for more information.
+2) You might need or want to perform more advanced DICOMweb configuration. Please visit [the Orthanc Book](https://orthanc.uclouvain.be/book/index.html) and, in particular, [the DICOMweb plugin page](https://orthanc.uclouvain.be/book/plugins/dicomweb.html) for more information.
 
 
 

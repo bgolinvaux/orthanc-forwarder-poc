@@ -1,7 +1,7 @@
 
 # What this does 
 
-This example demonstrates how to use the `OrthancForwarder` class from the `python-orthanc-tools` package (from Orthanc Team) to forward all the DICOM resources from two Orthanc servers to a third destination server, through the DICOMweb protocol.
+This example demonstrates how to use the `OrthancForwarder` class from the `python-orthanc-tools` package (from [Orthanc Team](https://github.com/orthanc-team)) to forward all the DICOM resources from two Orthanc servers to a third destination server, through the DICOMweb protocol.
 
 **WARNING**: this forwarder will _move_ the DICOM resources that will thus be removed from the source Orthanc servers. This is a proof of concept and should be used with caution.
 
